@@ -6,7 +6,8 @@ var gulp         = require('gulp'),
     plumber      = require('gulp-plumber'),
     rename       = require('gulp-rename'),
     notify       = require('gulp-notify'),
-    watch        = require('gulp-watch');
+    watch        = require('gulp-watch'),
+    exec         = require('child_process').exec;
 
 var scripts_src = [
     'bower_components/foundation-sites/src/js/foundation.js',
