@@ -6220,3 +6220,19 @@ a.thumbnail {
       right: 2px;
       bottom: 2px;
       transition: border-color 500ms linear; }
+
+.large-menu {
+  background-color: #F0EEE8;
+  padding: 1rem 0; }
+  .large-menu a {
+    font-family: Vollkorn;
+    color: #616261;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 1rem 1.875rem; }
+    .large-menu a:hover {
+      color: #90B5A3; }
+  .large-menu .logo {
+    padding: 0; }
+    .large-menu .logo img {
+      margin: 0; }

@@ -9,30 +9,42 @@
     </div>
   </div>
 
-  <nav role="navigation">
-    <ul class="site-nav">
-      {% for link in linklists[section.settings.main_linklist].links %}
-        {%- assign child_list_handle = link.title | handleize -%}
-        {% if menus[child_list_handle].links != blank %}
-          <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
-            <a href="{{ link.url }}" class="site-nav__link">
-              {{ link.title }}
-              {% include 'icon-arrow-down' %}
-            </a>
-            <ul class="site-nav__submenu">
-              {% for childlink in menus[child_list_handle].links %}
-                <li {% if childlink.active %}class="site-nav--active"{% endif %}>
-                  <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+  <nav class="large-menu" role="navigation">
+    <ul class="horizontal menu align-center">
+        {% for link in linklists[section.settings.main_linklist].links %}
+            {%- assign child_list_handle = link.title | handleize -%}
+            {% if menus[child_list_handle].links != blank %}
+              <li class="site-nav--has-submenu {% if link.active %}active{% endif %}">
+                <a href="{{ link.url }}">
+                    {{ link.title }}
+                    {% include 'icon-arrow-down' %}
+                </a>
+                <ul class="menu">
+                    {% for childlink in menus[child_list_handle].links %}
+                      <li {% if childlink.active %}class="active"{% endif %}>
+                        <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                      </li>
+                    {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              {% if link.title == "Home" %}
+                <li>
+                  <a href="{{ link.url }}" class="logo">
+                    {% if section.settings.logo %}
+                      {{ section.settings.logo  }}
+                    {% else %}
+                      <img src="https://placeimg.com/217/71/any" alt="placeholder">
+                    {% endif %}
+                </a>
                 </li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li {% if link.active %}class="site-nav--active"{% endif %}>
-            <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
+              {% else %}
+                <li {% if link.active %}class="active"{% endif %}>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endif %}
+            {% endif %}
+        {% endfor %}
     </ul>
   </nav>
 </header>
@@ -44,7 +56,8 @@
       {
         "type": "text",
         "id": "banner",
-        "label": "Banner Text"
+        "label": "Banner Text",
+        "default": "Want wedding inspiration and savings?"
       },
       {
         "type": "image_picker",

@@ -75,3 +75,27 @@
     }
   }
 }
+
+// large menu
+.large-menu {
+  background-color: get-color(secondary);
+  padding: rem-calc(16px) 0;
+
+  a {
+    font-family: Vollkorn;
+    color: get-color(secondary_dark);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: rem-calc(16px) rem-calc(30px);
+    &:hover {
+      color: get-color(primary);
+    }
+  }
+
+  .logo {
+    padding: 0;
+    img {
+      margin: 0;
+    }
+  }
+}
