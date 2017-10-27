@@ -60,6 +60,9 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
+  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'app.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
+  <!--[if lt IE 9]><script src="{{ 'app.js' | asset_url }}"></script><![endif]-->
+
   {{ content_for_header }}
 </head>
 
@@ -68,6 +71,7 @@
   <a class="in-page-link hide skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
   {% section 'header' %}
+  {% section 'slider' %}
 
   <main role="main" id="MainContent">
     {{ content_for_layout }}

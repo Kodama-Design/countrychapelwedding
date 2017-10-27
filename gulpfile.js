@@ -10,7 +10,8 @@ var gulp         = require('gulp'),
     exec         = require('child_process').exec;
 
 var scripts_src = [
-    'bower_components/foundation-sites/src/js/foundation.js',
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/foundation-sites/dist/js/foundation.js',
     'bower_components/fancybox/src/jquery.fancybox.js',
     'bower_components/slick-carousel/slick/slick.js',
     'src/scripts/app.js'
@@ -44,8 +45,6 @@ gulp.task('scripts', function(){
     gulp.src(scripts_src)
         .pipe(concat('app.js'))
         .pipe(plumber(plumberErrorHandler))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
         .pipe(gulp.dest(scripts_dist));
 });
 

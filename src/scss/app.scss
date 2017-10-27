@@ -1,5 +1,7 @@
 @import "settings";
 @import "foundation";
+@import "slick.scss";
+@import "slick-theme.scss";
 @include foundation-everything(true);
 @include foundation-flex-classes;
 @include foundation-flex-grid;
@@ -187,5 +189,124 @@
 
   small {
     font-size: rem-calc(12px);
+  }
+}
+
+//slider
+.slider {
+  margin: 0;
+  height: auto;
+  color: $white;
+
+  .slick-next {
+    right: calc(50% - 600px - 65px);
+    z-index: 2;
+    width: 65px;
+    height: 65px;
+
+    &::before {
+      font-size: rem-calc(65px);
+      content: "\f18e";
+      font-family: FontAwesome;
+      color: $white;
+    }
+  }
+
+  .slick-prev {
+    left: calc(50% - 600px - 65px);
+    z-index: 2;
+    width: 65px;
+    height: 65px;
+
+    &::before {
+      font-size: rem-calc(65px);
+      content: "\f190";
+      font-family: FontAwesome;
+      color: $white;
+    }
+  }
+
+  .slick-dots {
+    bottom: 25px;
+    z-index: 2;
+
+    button::before {
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $white;
+      background-color: transparent;
+      transition: 500ms background-color linear;
+      opacity: 1;
+    }
+
+    .slick-active button::before {
+      background-color: $white;
+      opacity: 1;
+    }
+  }
+
+  .slide {
+    padding: rem-calc(148px) 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      border: 3px solid $white;
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      left: 10px;
+      right: 12px;
+    }
+  }
+
+  .title {
+    font-family: Vollkorn;
+    font-size: 65px;
+    margin-bottom: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-family: Vollkorn;
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 32px;
+    line-height: 1;
+  }
+
+  .button {
+    font-family: Vollkorn;
+    font-size: rem-calc(16px);
+    font-weight: 500;
+    color: get-color(primary);
+    text-transform: uppercase;
+    padding: 16px 37px;
+    background-color: $white;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover, &:active {
+      &::after {
+        border-color: $white;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      border: 2px solid get-color(primary);
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      transition: border-color 500ms linear;
+    }
   }
 }

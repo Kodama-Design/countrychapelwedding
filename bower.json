@@ -19,6 +19,8 @@
     "font-awesome": "^4.7.0",
     "foundation-sites": "^6.4.3",
     "slick-carousel": "^1.8.1",
-    "fancybox": "^3.1.25"
+    "fancybox": "^3.1.25",
+    "jquery": "^3.2.1",
+    "slick": "*"
   }
 }

@@ -1,0 +1,52 @@
+<section class="slider">
+    <div class="slick" data-slick='{"dots": true}'>
+        <div class="slide" style="background-image: url('https://placeimg.com/1900/500/people');">
+            <div class="row columns">
+                <h2 class="title">COOPER GOODS</h2>
+                <div class="subtitle">Shiney, warm, and perfect for coasters, cake stands and more</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://placeimg.com/1900/500/people');">
+            <div class="row columns">
+                <h2 class="title">COOPER GOODS</h2>
+                <div class="subtitle">Shiney, warm, and perfect for coasters, cake stands and more</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://placeimg.com/1900/500/people');">
+            <div class="row columns">
+                <h2 class="title">COOPER GOODS</h2>
+                <div class="subtitle">Shiney, warm, and perfect for coasters, cake stands and more</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Slider",
+    "blocks": [{
+        "type": "slide",
+        "name": "Slide",
+        "settings": [{
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+        }, {
+            "id": "content",
+            "type": "text",
+            "label": "Content"
+        }, {
+            "id": "link",
+            "type": "url",
+            "label": "Link"
+        }, {
+            "id": "background",
+            "type": "image_picker",
+            "label": "Background"
+        }]
+    }]
+}
+{% endschema %}

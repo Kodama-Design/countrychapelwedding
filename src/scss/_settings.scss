@@ -1,3 +1,17 @@
+$slick-font-path: "";
+$slick-font-family: "slick";
+$slick-loader-path: "";
+$slick-arrow-color: white;
+$slick-dot-color: white;
+$slick-dot-color-active: $slick-dot-color;
+$slick-prev-character: "\2190";
+$slick-next-character: "\2192";
+$slick-dot-character: "\2022";
+$slick-dot-size: rem-calc(20px);
+$slick-opacity-default: 0.75;
+$slick-opacity-on-hover: 1;
+$slick-opacity-not-active: 0.25;
+
 $foundation-palette: (
   primary: #90B5A3,
   primary_dark: #55897F,
