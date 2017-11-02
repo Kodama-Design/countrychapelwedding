@@ -1,0 +1,37 @@
+<section class="gallery">
+    <div class="row columns">
+        <h2>ASPEN WOOD SLICES</h2>
+    </div>
+    <div class="row">
+        <div class="small-12 large-6 columns">
+            <img src="https://placeimg.com/570/410/people" alt="">
+        </div>
+        <div class="small-12 medium-6 large-3 columns">
+            <img src="https://placeimg.com/270/410/people" alt="">
+        </div>
+        <div class="small-12 medium-6 large-3 columns">
+            <img src="https://placeimg.com/270/190/people" alt="">
+            <img src="https://placeimg.com/270/190/people" alt="">
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Gallery 1",
+    "settings": [{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+    }],
+    "blocks": [{
+        "type": "images",
+        "name": "images",
+        "settings": [{
+            "id":    "image",
+            "type":  "image_picker",
+            "label": "Image"
+        }]
+    }]
+}
+{% endschema %}
