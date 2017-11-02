@@ -1,0 +1,79 @@
+<section class="alt-rows">
+    <div class="row align-center">
+        <div class="small-12 medium-10 large-8">
+            <div class="row columns text-center title">
+                <h2>
+                    OUR APPROACH
+                    TO YOUR SPECIAL DAY
+                </h2>
+            </div>
+            <div class="row align-center-middle">
+                <div class="small-12 large-6 columns">
+                    <img src="https://placeimg.com/350/350/people" alt="">
+                </div>
+                <div class="small-12 large-6 columns">
+                    <h4>Artistic Ideas</h4>
+                    <p>
+                        Each couple is unique, and so we believe every wedding should be, too.
+                        Our wedding decor can’t be found elsewhere, because they’re designed in-house away from cookie cutter big box warehouses
+                        (nothing against cookies, of course).
+                    </p>
+                </div>
+            </div>
+            <div class="row align-center-middle">
+                <div class="small-12 large-6 large-order-2 columns">
+                    <img src="https://placeimg.com/350/350/people" alt="">
+                </div>
+                <div class="small-12 large-6 large-order-1 columns">
+                    <h4>Serious Business</h4>
+                    <p>
+                        Though we craft our wedding decorations like artists, we manage operations with utmost care.
+                        What this means is you get gauranteed delivery dates, reliable bulk orders for big receptions,
+                        and a responsive customer care team so you can get hitched without a hitch!
+                    </p>
+                </div>
+            </div>
+            <div class="row align-center-middle">
+                <div class="small-12 large-6 columns">
+                    <img src="https://placeimg.com/350/350/people" alt="">
+                </div>
+                <div class="small-12 large-6 columns">
+                    <h4>Made with Love</h4>
+                    <p>
+                        Many of our wood slabs, place settings, arches and more are handcrafted right here in our workshop,
+                        and all of the items get inspected for quality. From custom personalized centerpieces to the smallest little mason jar,
+                        we make sure that your perfect life starts with perfect wedding decor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Slider",
+    "settings": [{
+        "type": "text",
+        "id": "alt_rows_title",
+        "label": "Alt Rows Title"
+    }],
+    "blocks": [{
+        "type": "slide",
+        "name": "Slide",
+        "settings": [{
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+        }, {
+            "id": "content",
+            "type": "textarea",
+            "label": "Content"
+        }, {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+        }]
+    }]
+}
+{% endschema %}

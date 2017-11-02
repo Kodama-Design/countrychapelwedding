@@ -6,6 +6,17 @@
 @include foundation-flex-classes;
 @include foundation-flex-grid;
 
+h2 {
+  color: get-color(secondary_dark);
+  font-family: Vollkorn;
+  line-height: 1;
+  text-transform: uppercase;
+}
+h4 {
+  color: get-color(primary_dark);
+  font-weight: 600;
+}
+
 .primary-bg {
   background-color: get-color(primary);
   color: $white;
@@ -193,7 +204,7 @@
 }
 
 //slider
-.slider {
+.slider, .testimonials {
   margin: 0;
   height: auto;
   color: $white;
@@ -264,6 +275,7 @@
   }
 
   .title {
+    color: $white;
     font-family: Vollkorn;
     font-size: 65px;
     margin-bottom: 32px;
@@ -308,5 +320,146 @@
       bottom: 2px;
       transition: border-color 500ms linear;
     }
+  }
+}
+
+// testimonials
+// note it extends from the .sliders styles
+.testimonials {
+  color: $white;
+  .slide {
+    padding: rem-calc(32px) 0 rem-calc(48px);
+    &:after {
+      display: none;
+    }
+  }
+  .title {
+    font-size: rem-calc(40px);
+    margin-bottom: rem-calc(70px);
+  }
+  .headshot {
+    img {
+      display: inline-block;
+      border-radius: 100%;
+      border: 3px solid get-color(primary);
+      margin-bottom: rem-calc(16px);
+    }
+  }
+  .rating {
+    font-size: rem-calc(28px);
+  }
+  .quote {
+    font-family: Vollkorn;
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: rem-calc(28px);
+  }
+  .name {
+    font-family: Vollkorn;
+    font-size: rem-calc(25px);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: rem-calc(28px);
+  }
+}
+
+// alt rows
+.alt-rows, .stripped-alt-rows {
+  padding: rem-calc(50px) 0;
+  .title {
+    margin-bottom: rem-calc(50px);
+    max-width: rem-calc(500px);
+  }
+  img, p {
+    margin-bottom: rem-calc(32px);
+  }
+  .content {
+    color: get-color(secondary_dark);
+    font-size: rem-calc(14px);
+  }
+}
+
+// stripped alt rows
+.stripped-alt-rows {
+  padding-bottom: 0;
+  .title {
+    margin-bottom: rem-calc(50px - 32px);
+  }
+  .align-center {
+    padding-top: rem-calc(32px);
+  }
+  .stripped {
+    background-color: get-color(secondary);
+  }
+}
+
+// faq
+.faq {
+  padding: rem-calc(50px) 0;
+  h5 {
+    color: get-color(primary_dark);
+    margin-bottom: rem-calc(14px);
+  }
+  p + h5 {
+    margin-top: rem-calc(50px);
+  }
+}
+
+// founders
+.founders {
+  padding: rem-calc(50px) 0;
+  background-color: get-color(secondary);
+  text-align: center;
+  h2 {
+    margin-bottom: rem-calc(30px);
+  }
+  img {
+    border-radius: 100%;
+    border: 5px solid get-color(primary_dark);
+    margin: rem-calc(30px) 0;
+  }
+  .title {
+    color: get-color(primary_dark);
+    margin-bottom: rem-calc(30px);
+  }
+  .content {
+    margin: 0;
+    font-size: rem-calc(14px);
+  }
+}
+
+//blocked content
+.blocked {
+  padding: rem-calc(50px) 0;
+  text-align: center;
+  h2 {
+    margin-bottom: rem-calc(30px);
+  }
+  .featured-img {
+    position: relative;
+    margin-bottom: rem-calc(30px);
+
+    img {
+      width:100%;
+      margin: 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      border: 5px solid $white;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+    }
+  }
+  .title {
+    color: get-color(primary_dark);
+  }
+  .content {
+    margin-bottom: 0;
+    font-size: rem-calc(14px);
   }
 }

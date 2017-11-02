@@ -2269,7 +2269,7 @@ h6, .h6 {
   h3, .h3 {
     font-size: 1.9375rem; }
   h4, .h4 {
-    font-size: 1.5625rem; }
+    font-size: 1.875rem; }
   h5, .h5 {
     font-size: 1.125rem; }
   h6, .h6 {
@@ -6357,6 +6357,16 @@ a.thumbnail {
       .column-block > :last-child {
         margin-bottom: 0; } }
 
+h2 {
+  color: #616261;
+  font-family: Vollkorn;
+  line-height: 1;
+  text-transform: uppercase; }
+
+h4 {
+  color: #55897F;
+  font-weight: 600; }
+
 .primary-bg {
   background-color: #90B5A3;
   color: #fefefe; }
@@ -6497,34 +6507,34 @@ a.thumbnail {
   .copyright small {
     font-size: 0.75rem; }
 
-.slider {
+.slider, .testimonials {
   margin: 0;
   height: auto;
   color: #fefefe; }
-  .slider .slick-next {
+  .slider .slick-next, .testimonials .slick-next {
     right: calc(50% - 600px - 65px);
     z-index: 2;
     width: 65px;
     height: 65px; }
-    .slider .slick-next::before {
+    .slider .slick-next::before, .testimonials .slick-next::before {
       font-size: 4.0625rem;
       content: "\f18e";
       font-family: FontAwesome;
       color: #fefefe; }
-  .slider .slick-prev {
+  .slider .slick-prev, .testimonials .slick-prev {
     left: calc(50% - 600px - 65px);
     z-index: 2;
     width: 65px;
     height: 65px; }
-    .slider .slick-prev::before {
+    .slider .slick-prev::before, .testimonials .slick-prev::before {
       font-size: 4.0625rem;
       content: "\f190";
       font-family: FontAwesome;
       color: #fefefe; }
-  .slider .slick-dots {
+  .slider .slick-dots, .testimonials .slick-dots {
     bottom: 25px;
     z-index: 2; }
-    .slider .slick-dots button::before {
+    .slider .slick-dots button::before, .testimonials .slick-dots button::before {
       border-radius: 100%;
       width: 20px;
       height: 20px;
@@ -6532,15 +6542,15 @@ a.thumbnail {
       background-color: transparent;
       transition: 500ms background-color linear;
       opacity: 1; }
-    .slider .slick-dots .slick-active button::before {
+    .slider .slick-dots .slick-active button::before, .testimonials .slick-dots .slick-active button::before {
       background-color: #fefefe;
       opacity: 1; }
-  .slider .slide {
+  .slider .slide, .testimonials .slide {
     padding: 9.25rem 0;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative; }
-    .slider .slide:after {
+    .slider .slide:after, .testimonials .slide:after {
       content: "";
       display: block;
       border: 3px solid #fefefe;
@@ -6549,19 +6559,20 @@ a.thumbnail {
       bottom: 12px;
       left: 10px;
       right: 12px; }
-  .slider .title {
+  .slider .title, .testimonials .title {
+    color: #fefefe;
     font-family: Vollkorn;
     font-size: 65px;
     margin-bottom: 32px;
     line-height: 1;
     text-transform: uppercase; }
-  .slider .subtitle {
+  .slider .subtitle, .testimonials .subtitle {
     font-family: Vollkorn;
     font-size: 25px;
     font-style: italic;
     margin-bottom: 32px;
     line-height: 1; }
-  .slider .button {
+  .slider .button, .testimonials .button {
     font-family: Vollkorn;
     font-size: 1rem;
     font-weight: 500;
@@ -6573,9 +6584,9 @@ a.thumbnail {
     position: relative;
     cursor: pointer;
     z-index: 2; }
-    .slider .button:hover::after, .slider .button:active::after {
+    .slider .button:hover::after, .slider .button:active::after, .testimonials .button:hover::after, .testimonials .button:active::after {
       border-color: #fefefe; }
-    .slider .button::after {
+    .slider .button::after, .testimonials .button::after {
       content: "";
       display: block;
       border: 2px solid #90B5A3;
@@ -6585,3 +6596,102 @@ a.thumbnail {
       right: 2px;
       bottom: 2px;
       transition: border-color 500ms linear; }
+
+.testimonials {
+  color: #fefefe; }
+  .testimonials .slide {
+    padding: 2rem 0 3rem; }
+    .testimonials .slide:after {
+      display: none; }
+  .testimonials .title {
+    font-size: 2.5rem;
+    margin-bottom: 4.375rem; }
+  .testimonials .headshot img {
+    display: inline-block;
+    border-radius: 100%;
+    border: 3px solid #90B5A3;
+    margin-bottom: 1rem; }
+  .testimonials .rating {
+    font-size: 1.75rem; }
+  .testimonials .quote {
+    font-family: Vollkorn;
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 1.75rem; }
+  .testimonials .name {
+    font-family: Vollkorn;
+    font-size: 1.5625rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 1.75rem; }
+
+.alt-rows, .stripped-alt-rows {
+  padding: 3.125rem 0; }
+  .alt-rows .title, .stripped-alt-rows .title {
+    margin-bottom: 3.125rem;
+    max-width: 31.25rem; }
+  .alt-rows img, .alt-rows p, .stripped-alt-rows img, .stripped-alt-rows p {
+    margin-bottom: 2rem; }
+  .alt-rows .content, .stripped-alt-rows .content {
+    color: #616261;
+    font-size: 0.875rem; }
+
+.stripped-alt-rows {
+  padding-bottom: 0; }
+  .stripped-alt-rows .title {
+    margin-bottom: 1.125rem; }
+  .stripped-alt-rows .align-center {
+    padding-top: 2rem; }
+  .stripped-alt-rows .stripped {
+    background-color: #F0EEE8; }
+
+.faq {
+  padding: 3.125rem 0; }
+  .faq h5 {
+    color: #55897F;
+    margin-bottom: 0.875rem; }
+  .faq p + h5 {
+    margin-top: 3.125rem; }
+
+.founders {
+  padding: 3.125rem 0;
+  background-color: #F0EEE8;
+  text-align: center; }
+  .founders h2 {
+    margin-bottom: 1.875rem; }
+  .founders img {
+    border-radius: 100%;
+    border: 5px solid #55897F;
+    margin: 1.875rem 0; }
+  .founders .title {
+    color: #55897F;
+    margin-bottom: 1.875rem; }
+  .founders .content {
+    margin: 0;
+    font-size: 0.875rem; }
+
+.blocked {
+  padding: 3.125rem 0;
+  text-align: center; }
+  .blocked h2 {
+    margin-bottom: 1.875rem; }
+  .blocked .featured-img {
+    position: relative;
+    margin-bottom: 1.875rem; }
+    .blocked .featured-img img {
+      width: 100%;
+      margin: 0; }
+    .blocked .featured-img::after {
+      content: "";
+      display: block;
+      border: 5px solid #fefefe;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px; }
+  .blocked .title {
+    color: #55897F; }
+  .blocked .content {
+    margin-bottom: 0;
+    font-size: 0.875rem; }

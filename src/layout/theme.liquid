@@ -63,6 +63,8 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'app.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lt IE 9]><script src="{{ 'app.js' | asset_url }}"></script><![endif]-->
 
+  <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/d7OTzrrgCeWxlJt5szaF8uY8BMBbUL0PLx8tvFPU/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+
   {{ content_for_header }}
 </head>
 
@@ -70,12 +72,20 @@
 
   <a class="in-page-link hide skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
+  {% section 'blocked-content' %}
   {% section 'header' %}
+  {% section 'founders' %}
   {% section 'slider' %}
+  {% section 'alt-rows' %}
+  {% section 'testimonial' %}
+  {% section 'stripped-alt-rows' %}
+  {% section 'faq' %}
 
+  <!--
   <main role="main" id="MainContent">
     {{ content_for_layout }}
   </main>
+  -->
 
   {% section 'footer' %}
 

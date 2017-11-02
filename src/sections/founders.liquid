@@ -1,0 +1,61 @@
+<section class="founders">
+    <div class="row align-center">
+        <div class="small-12 medium-10 large-8">
+            <div class="row columns">
+                <h2>OUR FOUNDING COUPLE</h2>
+            </div>
+            <div class="row small-up-1 medium-up-2 align-center">
+                <div class="column">
+                    <img src="https://placeimg.com/268/268/people" alt="">
+                    <h4 class="title">Rachel Peterson</h4>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus non lectus mi. Aenean ornare justo ac molestie sollicitudin.
+                        In hac habitasse platea dictumst.
+                        Fusce vitae sollicitudin lacus, nec blandit turpis.
+                        Phasellus nec maximus sem, sed efficitur metus. Quisque feugiat fermentum ex rutrum rutrum.
+                    </p>
+                </div>
+                <div class="column">
+                    <img src="https://placeimg.com/268/268/people" alt="">
+                    <h4 class="title">Rachel Peterson</h4>
+                    <p class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus non lectus mi. Aenean ornare justo ac molestie sollicitudin.
+                        In hac habitasse platea dictumst.
+                        Fusce vitae sollicitudin lacus, nec blandit turpis.
+                        Phasellus nec maximus sem, sed efficitur metus. Quisque feugiat fermentum ex rutrum rutrum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Founders",
+    "settings": [{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+    }],
+    "blocks": [{
+        "type": "founder",
+        "name": "founder",
+        "settings": [{
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+        }, {
+            "id":    "headshot",
+            "type":  "image_picker",
+            "label": "Headshot"
+        }, {
+            "id": "content",
+            "type": "textarea",
+            "label": "Content"
+        }]
+    }]
+}
+{% endschema %}

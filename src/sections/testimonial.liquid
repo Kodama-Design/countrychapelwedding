@@ -1,0 +1,96 @@
+<section class="testimonials">
+    <div class="slick">
+        <div class="slide" style="background-image: url('https://placeimg.com/1900/500/people');">
+            <div class="row columns text-center">
+                <h2 class="title">Featured Weddings</h2>
+                <div class="headshot"><img src="https://placeimg.com/78/78/people'" alt=""></div>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="quote">My ceremony looked perfect under that elm arch, thanks to Country Chapel Weddings!</div>
+                <div class="name">Jenny Anderson</div>
+                <a href="#" class="button">View</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://placeimg.com/1900/500/people');">
+            <div class="row columns text-center">
+                <h2 class="title">Featured Weddings</h2>
+                <div class="headshot"><img src="https://placeimg.com/78/78/people'" alt=""></div>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="quote">My ceremony looked perfect under that elm arch, thanks to Country Chapel Weddings!</div>
+                <div class="name">Jenny Anderson</div>
+                <a href="#" class="button">View</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://placeimg.com/1900/500/people');">
+            <div class="row columns text-center">
+                <h2 class="title">Featured Weddings</h2>
+                <div class="headshot"><img src="https://placeimg.com/78/78/people'" alt=""></div>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="quote">My ceremony looked perfect under that elm arch, thanks to Country Chapel Weddings!</div>
+                <div class="name">Jenny Anderson</div>
+                <a href="#" class="button">View</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Testimonials",
+    "settings": [{
+        "type": "text",
+        "id": "testimonial_title",
+        "label": "Testimonial Title"
+    }],
+    "blocks": [{
+        "type": "slide",
+        "name": "testimony",
+        "settings": [{
+            "id":    "name",
+            "type":  "text",
+            "label": "Name"
+        }, {
+            "type":  "range",
+            "id":    "rating",
+            "min":   1,
+            "max":   5,
+            "step":  1,
+            "label": "Rating",
+            "default": 5
+        }, {
+            "id":    "content",
+            "type":  "textarea",
+            "label": "Content"
+        }, {
+            "id":    "link",
+            "type":  "url",
+            "label": "Link"
+        }, {
+            "id":    "headshot",
+            "type":  "image_picker",
+            "label": "Headshot"
+        }, {
+            "id":    "background",
+            "type":  "image_picker",
+            "label": "Background"
+        }]
+    }]
+}
+{% endschema %}

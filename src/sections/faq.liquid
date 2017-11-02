@@ -1,0 +1,57 @@
+<section class="faq">
+    <div class="row align-center">
+        <div class="small-12 medium-10 large-8">
+            <div class="title">
+                <h2>
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+            </div>
+            <h5>How long will my order take to ship?</h5>
+            <p>
+                I try to keep most items in stock, and they should ship within 3-5 business days of ordering.
+                Large orders of wood slabs may need to be cut and dried for several weeks before shipment.
+                Contact me to see if I have what you need on hand, or to make an order for a future event date.
+            </p>
+            <h5>Where do you source your wood?</h5>
+            <p>
+                All the wood I harvest comes from powerline clear cuttings, tree trimmings, or windfalls,
+                so nothing is cut down just for the sake of profit.
+                I mostly use Juniper, Aspen, Elm from Northern Arizona.
+            </p>
+            <h5>My wedding is in or near Flagstaff, Arizona. Can I get my items delivered or pick them up?</h5>
+            <p>
+                Of course! Contact me to get a package order put together without shipping costs and we can arrange
+                a time to meet for you to get your products. I love to provide decor for local weddings!
+            </p>
+            <h5>International Shipping?</h5>
+            <p>
+                The success of an International shipment depends on the destination country and the customs regulations regarding wood imports.
+                Please contact me before making an order to inquire about your specific country.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "FAQ",
+    "settings": [{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+        }],
+    "blocks": [{
+        "type": "slide",
+        "name": "Slide",
+        "settings": [{
+            "id": "title",
+            "type": "text",
+            "label": "Title"
+        }, {
+            "id": "content",
+            "type": "textarea",
+            "label": "Content"
+        }]
+    }]
+}
+{% endschema %}
