@@ -41,7 +41,7 @@
 
 {% schema %}
 {
-    "name": "Founders",
+    "name": "Blocked Content",
     "settings": [{
         "type": "text",
         "id": "title",
@@ -51,13 +51,13 @@
         "type": "founder",
         "name": "founder",
         "settings": [{
+            "id":    "image",
+            "type":  "image_picker",
+            "label": "Image"
+        }, {
             "id": "title",
             "type": "text",
             "label": "Title"
-        }, {
-            "id":    "headshot",
-            "type":  "image_picker",
-            "label": "Headshot"
         }, {
             "id": "content",
             "type": "textarea",

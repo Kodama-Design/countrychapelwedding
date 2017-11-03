@@ -1,63 +1,46 @@
-<section class="blocked">
+<section class="blocked-links">
     <div class="row columns">
-        <h2>FOR WEDDING PLANNERS</h2>
+        <h2 class="title">SOME OF OUR FAVORITE WEDDINGS</h2>
     </div>
-    <div class="row small-up-1 medium-up-3">
+    <div class="row small-up-1 medium-up-2">
         <div class="column">
             <div class="featured-img">
-                <img src="https://placeimg.com/340/340/people" alt="">
+                <img src="https://placeimg.com/445/390/people" alt="">
+                <a href="htpp://google.com">
+                    <h2 class="title">ASPEN WOOD SLICES</h2>
+                </a>
             </div>
-            <h4 class="title">Bulk Orders</h4>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus non lectus mi.
-                Aenean ornare justo ac molestie sollicitudin. In hac habitasse platea.
-            </p>
         </div>
         <div class="column">
             <div class="featured-img">
-                <img src="https://placeimg.com/340/340/people" alt="">
+                <img src="https://placeimg.com/445/390/people" alt="">
+                <a href="htpp://google.com">
+                    <h2 class="title">CENTERPIECES</h2>
+                </a>
             </div>
-            <h4 class="title">Bulk Orders</h4>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus non lectus mi.
-                Aenean ornare justo ac molestie sollicitudin. In hac habitasse platea.
-            </p>
-        </div>
-        <div class="column">
-            <div class="featured-img">
-                <img src="https://placeimg.com/340/340/people" alt="">
-            </div>
-            <h4 class="title">Bulk Orders</h4>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus non lectus mi.
-                Aenean ornare justo ac molestie sollicitudin. In hac habitasse platea.
-            </p>
         </div>
     </div>
 </section>
 
 {% schema %}
 {
-    "name": "Founders",
+    "name": "Blocked Links",
     "settings": [{
         "type": "text",
         "id": "title",
         "label": "Title"
     }],
     "blocks": [{
-        "type": "founder",
-        "name": "founder",
-        "settings": [{
+            "type": "founder",
+            "name": "founder",
+            "settings": [{
+            "id":    "image",
+            "type":  "image_picker",
+            "label": "Image"
+        }, {
             "id": "title",
             "type": "text",
             "label": "Title"
-        }, {
-            "id":    "headshot",
-            "type":  "image_picker",
-            "label": "Headshot"
         }, {
             "id": "content",
             "type": "textarea",

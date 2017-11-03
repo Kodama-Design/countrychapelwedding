@@ -6371,6 +6371,27 @@ h4 {
   background-color: #90B5A3;
   color: #fefefe; }
 
+.featured-img {
+  position: relative;
+  margin-bottom: 1.875rem; }
+  .featured-img img {
+    width: 100%;
+    margin: 0; }
+  .featured-img a {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 5px solid #fefefe;
+    transition: background-color 500ms linear; }
+    .featured-img a:hover {
+      background-color: #fefefe; }
+      .featured-img a:hover h2 {
+        color: #55897F; }
+
 .header-banner input[type=email], .footer input[type=email] {
   width: 11.25rem;
   border: 2px solid #fefefe;
@@ -6695,3 +6716,69 @@ h4 {
   .blocked .content {
     margin-bottom: 0;
     font-size: 0.875rem; }
+
+.blocked-links {
+  padding: 3.125rem 0;
+  text-align: center; }
+  .blocked-links .title {
+    margin-bottom: 1.875rem; }
+  .blocked-links .featured-img .title {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 1.875rem;
+    right: 1.875rem;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    color: #fefefe;
+    transition: color 500ms linear; }
+
+.gallery {
+  background-color: #90B5A3;
+  color: #fefefe;
+  padding: 3.125rem 0 1.25rem; }
+  .gallery h2 {
+    text-align: center;
+    margin-bottom: 1.875rem;
+    color: #fefefe; }
+  .gallery img {
+    width: 100%;
+    margin-bottom: 1.875rem; }
+
+.featured-products {
+  background-color: #F0EEE8;
+  padding: 3.125rem 0;
+  text-align: center; }
+  .featured-products h2 {
+    text-align: center;
+    margin-bottom: 1.875rem; }
+  .featured-products .featured-img {
+    margin-bottom: 1.875rem; }
+  .featured-products .title {
+    color: #55897F;
+    margin-bottom: 0.9375rem; }
+  .featured-products .content {
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem; }
+  .featured-products .price {
+    color: #616261;
+    font-size: 1.375rem;
+    font-family: Vollkorn;
+    font-weight: 600;
+    text-align: center; }
+
+.featured-articles {
+  background-color: #F0EEE8;
+  padding: 3.125rem 0;
+  text-align: center; }
+  .featured-articles h2 {
+    text-align: center;
+    margin-bottom: 1.875rem; }
+  .featured-articles .featured-image {
+    margin-bottom: 1.875rem; }
+  .featured-articles .title {
+    color: #55897F;
+    margin-bottom: 0.9375rem; }
+  .featured-articles .content {
+    font-size: 0.875rem;
+    margin-bottom: 0.9375rem; }

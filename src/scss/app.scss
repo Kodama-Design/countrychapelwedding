@@ -22,6 +22,36 @@ h4 {
   color: $white;
 }
 
+.featured-img {
+  position: relative;
+  margin-bottom: rem-calc(30px);
+
+  img {
+    width: 100%;
+    margin: 0;
+  }
+
+  a {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 5px solid $white;
+    transition: background-color 500ms linear;
+
+    &:hover {
+      background-color: $white;
+      h2 {
+        color: get-color(primary_dark);
+      }
+    }
+  }
+}
+
+
 // forms
 .header-banner , .footer {
   input[type=email] {
@@ -327,16 +357,19 @@ h4 {
 // note it extends from the .sliders styles
 .testimonials {
   color: $white;
+
   .slide {
     padding: rem-calc(32px) 0 rem-calc(48px);
     &:after {
       display: none;
     }
   }
+
   .title {
     font-size: rem-calc(40px);
     margin-bottom: rem-calc(70px);
   }
+
   .headshot {
     img {
       display: inline-block;
@@ -345,15 +378,18 @@ h4 {
       margin-bottom: rem-calc(16px);
     }
   }
+
   .rating {
     font-size: rem-calc(28px);
   }
+
   .quote {
     font-family: Vollkorn;
     font-size: 25px;
     font-style: italic;
     margin-bottom: rem-calc(28px);
   }
+
   .name {
     font-family: Vollkorn;
     font-size: rem-calc(25px);
@@ -366,13 +402,16 @@ h4 {
 // alt rows
 .alt-rows, .stripped-alt-rows {
   padding: rem-calc(50px) 0;
+
   .title {
     margin-bottom: rem-calc(50px);
     max-width: rem-calc(500px);
   }
+
   img, p {
     margin-bottom: rem-calc(32px);
   }
+
   .content {
     color: get-color(secondary_dark);
     font-size: rem-calc(14px);
@@ -382,12 +421,15 @@ h4 {
 // stripped alt rows
 .stripped-alt-rows {
   padding-bottom: 0;
+
   .title {
     margin-bottom: rem-calc(50px - 32px);
   }
+
   .align-center {
     padding-top: rem-calc(32px);
   }
+
   .stripped {
     background-color: get-color(secondary);
   }
@@ -396,10 +438,12 @@ h4 {
 // faq
 .faq {
   padding: rem-calc(50px) 0;
+
   h5 {
     color: get-color(primary_dark);
     margin-bottom: rem-calc(14px);
   }
+
   p + h5 {
     margin-top: rem-calc(50px);
   }
@@ -410,18 +454,22 @@ h4 {
   padding: rem-calc(50px) 0;
   background-color: get-color(secondary);
   text-align: center;
+
   h2 {
     margin-bottom: rem-calc(30px);
   }
+
   img {
     border-radius: 100%;
     border: 5px solid get-color(primary_dark);
     margin: rem-calc(30px) 0;
   }
+
   .title {
     color: get-color(primary_dark);
     margin-bottom: rem-calc(30px);
   }
+
   .content {
     margin: 0;
     font-size: rem-calc(14px);
@@ -432,9 +480,11 @@ h4 {
 .blocked {
   padding: rem-calc(50px) 0;
   text-align: center;
+
   h2 {
     margin-bottom: rem-calc(30px);
   }
+
   .featured-img {
     position: relative;
     margin-bottom: rem-calc(30px);
@@ -455,11 +505,113 @@ h4 {
       bottom: 8px;
     }
   }
+
   .title {
     color: get-color(primary_dark);
   }
+
   .content {
     margin-bottom: 0;
     font-size: rem-calc(14px);
+  }
+}
+
+// blocked-links
+.blocked-links {
+  padding: rem-calc(50px) 0;
+  text-align: center;
+
+  .title {
+    margin-bottom: rem-calc(30px);
+  }
+
+  .featured-img .title {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: rem-calc(30px);
+    right: rem-calc(30px);
+    transform: translateY(-50%);
+    color: $white;
+    transition: color 500ms linear;
+  }
+}
+
+// gallery
+.gallery {
+  background-color: get-color(primary);
+  color: $white;
+  padding: rem-calc(50px) 0 rem-calc(20px);
+
+  h2 {
+    text-align: center;
+    margin-bottom: rem-calc(30px);
+    color: $white;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: rem-calc(30px);
+  }
+}
+
+// featured-products
+.featured-products {
+  background-color: get-color(secondary);
+  padding: rem-calc(50px) 0;
+  text-align: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: rem-calc(30px);
+  }
+
+  .featured-img {
+    margin-bottom: rem-calc(30px);
+  }
+
+  .title {
+    color: get-color(primary_dark);
+    margin-bottom: rem-calc(15px);
+  }
+
+  .content {
+    font-size: rem-calc(14px);
+    margin-bottom: rem-calc(15px);
+  }
+
+  .price {
+    color: get-color(secondary_dark);
+    font-size: rem-calc(22px);
+    font-family: Vollkorn;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+// featured articles
+.featured-articles {
+
+  background-color: get-color(secondary);
+  padding: rem-calc(50px) 0;
+  text-align: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: rem-calc(30px);
+  }
+
+  .featured-image {
+    margin-bottom: rem-calc(30px);
+  }
+
+  .title {
+    color: get-color(primary_dark);
+    margin-bottom: rem-calc(15px);
+  }
+
+  .content {
+    font-size: rem-calc(14px);
+    margin-bottom: rem-calc(15px);
   }
 }

@@ -1,67 +1,36 @@
-<section class="blocked">
+<section class="gallery">
     <div class="row columns">
-        <h2>FOR WEDDING PLANNERS</h2>
+        <h2>ASPEN WOOD SLICES</h2>
     </div>
-    <div class="row small-up-1 medium-up-3">
-        <div class="column">
-            <div class="featured-img">
-                <img src="https://placeimg.com/340/340/people" alt="">
-            </div>
-            <h4 class="title">Bulk Orders</h4>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus non lectus mi.
-                Aenean ornare justo ac molestie sollicitudin. In hac habitasse platea.
-            </p>
+    <div class="row">
+        <div class="small-12 large-6 columns">
+            <img src="https://placeimg.com/570/410/people" alt="">
         </div>
-        <div class="column">
-            <div class="featured-img">
-                <img src="https://placeimg.com/340/340/people" alt="">
-            </div>
-            <h4 class="title">Bulk Orders</h4>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus non lectus mi.
-                Aenean ornare justo ac molestie sollicitudin. In hac habitasse platea.
-            </p>
+        <div class="small-12 medium-6 large-3 columns">
+            <img src="https://placeimg.com/270/410/people" alt="">
         </div>
-        <div class="column">
-            <div class="featured-img">
-                <img src="https://placeimg.com/340/340/people" alt="">
-            </div>
-            <h4 class="title">Bulk Orders</h4>
-            <p class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus non lectus mi.
-                Aenean ornare justo ac molestie sollicitudin. In hac habitasse platea.
-            </p>
+        <div class="small-12 medium-6 large-3 columns">
+            <img src="https://placeimg.com/270/190/people" alt="">
+            <img src="https://placeimg.com/270/190/people" alt="">
         </div>
     </div>
 </section>
 
 {% schema %}
 {
-    "name": "Blocked Content",
+    "name": "Gallery 1",
     "settings": [{
         "type": "text",
         "id": "title",
         "label": "Title"
     }],
     "blocks": [{
-        "type": "founder",
-        "name": "founder",
+        "type": "images",
+        "name": "images",
         "settings": [{
             "id":    "image",
             "type":  "image_picker",
             "label": "Image"
-        }, {
-            "id": "title",
-            "type": "text",
-            "label": "Title"
-        }, {
-            "id": "content",
-            "type": "textarea",
-            "label": "Content"
         }]
     }]
 }
